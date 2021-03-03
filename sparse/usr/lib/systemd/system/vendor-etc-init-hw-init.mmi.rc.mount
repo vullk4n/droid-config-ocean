@@ -1,0 +1,13 @@
+[Unit]
+Description=Vendor mount for init.mmi.rc and init.qcom.rc
+Before=local-fs.target
+
+[Mount]
+What=/usr/libexec/droid-hybris/system/etc/init.mmi.rc
+Where=/vendor/etc/init/hw/init.mmi.rc
+Type=none
+Options=ro,bind
+TimeoutSec=5
+
+[Install]
+WantedBy=local-fs.target

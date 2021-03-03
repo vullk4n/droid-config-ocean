@@ -1,0 +1,10 @@
+# Feel free to disable non-critical HA parts during devel by commenting lines out
+# Generated in hadk by executing: rpm/dhd/helpers/add_new_device.sh
+
+Description: Pattern with packages for ocean configurations
+Name: jolla-configuration-ocean
+Requires:
+- patterns-sailfish-device-configuration-ocean
+
+Summary: Jolla Configuration ocean
+

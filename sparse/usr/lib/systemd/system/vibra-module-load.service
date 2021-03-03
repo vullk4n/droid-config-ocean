@@ -1,0 +1,15 @@
+[Unit]
+Description=Load aw8624 module
+Conflicts=shutdown.target
+After=local-fs.target
+
+[Service]
+Type=simple
+ExecStart=/sbin/modprobe aw8624
+ExecStop=/sbin/modprobe -r aw8624
+RemainAfterExit=yes
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
